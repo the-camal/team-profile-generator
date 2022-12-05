@@ -87,7 +87,7 @@ const promptMenu = () => {
     .then(userchoice => {
     switch (userchoice.menu) {
         case "add engineer":
-            promptengieer();
+            promptengineer();
             break;
             case "add intern":
                 promptintern();
@@ -98,7 +98,7 @@ const promptMenu = () => {
 });
 }
 
-const promptengieer = () => {
+const promptengineer = () => {
     console.log('');
     return inquirer.prompt([
         {
@@ -142,8 +142,8 @@ const promptengieer = () => {
 }
 ]).then(answers => {
     console.log(answers);
-    const Engineer = new Engineer(answers.name, answers.employeeId, answers.email, answers.github);
-    teamMembers.push(Engineer);
+    const engineerObj = new Engineer(answers.name, answers.employeeId, answers.email, answers.github);
+    teamMembers.push(engineerObj);
     promptMenu();
 })
 }
@@ -190,5 +190,4 @@ const buildteam = () => {
 }
 
 
-promptManager();
-    
+promptManager();  
