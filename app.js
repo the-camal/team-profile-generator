@@ -180,8 +180,8 @@ const promptintern = () => {
         }
     ]).then(answer => {
         console.log(answer);
-        const Intern = new Intern(answer.name, answer.email);
-        teamMembers.push(Intern);
+        const Internobj = new Intern(answer.name, answer.email);
+        teamMembers.push(Internobj);
         promptMenu();
     })
 };
