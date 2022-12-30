@@ -19,9 +19,7 @@ const templateHTML = require('./src/templateHTML');
 // Create an empty array of team members
 const teamMembers = [];
 
-/* -------------------------------------------------------------------------- */
-/*                              Add Team Members                              */
-/* -------------------------------------------------------------------------- */
+
 
 function addTeamMember() {
     inquirer
@@ -44,11 +42,7 @@ function addTeamMember() {
         });
 }
 
-/* -------------------------------------------------------------------------- */
-/*                           Employee Types Creation                          */
-/* -------------------------------------------------------------------------- */
 
-/* ------------------------- Get manager data inputs ------------------------ */
 function addManager() {
     inquirer
         .prompt([
