@@ -12,13 +12,10 @@ const Intern = require('./lib/Intern');
 const DIST_DIR = path.resolve(__dirname, 'dist');
 // Output file path and name
 const outputPath = path.join(DIST_DIR, 'teamProfile.html');
-
 // Import HTML template
 const templateHTML = require('./src/templateHTML');
-
 // Create an empty array of team members
 const teamMembers = [];
-
 
 
 function addTeamMember() {
