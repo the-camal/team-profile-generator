@@ -3,18 +3,14 @@ const inquirer = require('inquirer');
 const path = require('path');
 const fs = require('fs');
 
-// Import classes
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-
-// Output Directory
 const DIST_DIR = path.resolve(__dirname, 'dist');
-// Output file path and name
+
 const outputPath = path.join(DIST_DIR, 'teamProfile.html');
-// Import HTML template
+
 const templateHTML = require('./src/templateHTML');
-// Create an empty array of team members
 const teamMembers = [];
 
 
@@ -77,7 +73,7 @@ function addManager() {
         });
 }
 
-/* ------------------------ Get engineer data inputs ------------------------ */
+
 function addEngineer() {
     inquirer
         .prompt([
@@ -115,7 +111,6 @@ function addEngineer() {
         });
 }
 
-/* ------------------------- Get intern data inputs ------------------------- */
 function addIntern() {
     inquirer
         .prompt([
@@ -153,9 +148,6 @@ function addIntern() {
         });
 }
 
-/* -------------------------------------------------------------------------- */
-/*                            Create the html file                            */
-/* -------------------------------------------------------------------------- */
 function createTeamFile() {
     if (!fs.existsSync(DIST_DIR)) {
         fs.mkdirSync(DIST_DIR);
@@ -164,10 +156,6 @@ function createTeamFile() {
         console.log('HTML file created in the dist folder');
     }
 }
-
-/* -------------------------------------------------------------------------- */
-/*                            Start the application                           */
-/* -------------------------------------------------------------------------- */
 
 function startApp() {
     addManager();
